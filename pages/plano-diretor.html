@@ -6,27 +6,33 @@
   <title>Plano Diretor — Picos do Saber</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
-    .eixo-list {
+    .phase-list {
       list-style: none;
       padding: 0;
       display: grid;
       gap: 1rem;
     }
-    .eixo-list li {
+    .phase-list li {
       background: var(--color-white);
       border-radius: var(--radius);
       padding: 1.25rem;
       box-shadow: var(--shadow);
       border-left: 4px solid var(--color-primary);
     }
-    .eixo-list li strong {
+    .phase-list li strong {
       color: var(--color-primary-dark);
       display: block;
       margin-bottom: 0.25rem;
     }
+    .phase-list li span {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: 0.25rem;
+    }
     .meta-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1rem;
       margin: 1.5rem 0;
     }
@@ -37,14 +43,15 @@
       box-shadow: var(--shadow);
       text-align: center;
     }
-    .meta-card__pct {
-      font-size: 2rem;
+    .meta-card__num {
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--color-primary);
     }
     .meta-card__label {
       color: var(--color-text-light);
       font-size: 0.9rem;
+      margin-top: 0.25rem;
     }
     .timeline-pdi {
       position: relative;
@@ -97,24 +104,26 @@
         <h1 class="hero__title">Plano Diretor</h1>
         <p class="hero__subtitle">Plano de Desenvolvimento Institucional (PDI)</p>
         <p class="hero__description">
-          Diretrizes estratégicas, metas e eixos norteadores para o crescimento da instituição.
+          Roteiro de implanta&ccedil;&atilde;o, valida&ccedil;&atilde;o e consolida&ccedil;&atilde;o do Picos do Saber.
         </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">O que é o PDI</h2>
+        <h2 class="section__title">O que &eacute; o PDI</h2>
         <div class="section__body">
           <p>
-            O <strong>Plano de Desenvolvimento Institucional (PDI)</strong> é o documento que
-            define a missão, a visão, os valores, as diretrizes pedagógicas, a estrutura
-            organizacional e as atividades acadêmicas da instituição para um período determinado.
+            O <strong>Plano de Desenvolvimento Institucional (PDI)</strong> define a dire&ccedil;&atilde;o
+            estrat&eacute;gica do Picos do Saber para os pr&oacute;ximos 12 a 24 meses. Mais do que
+            um documento formal, &eacute; o roteiro pr&aacute;tico que orienta cada decis&atilde;o:
+            desde a escolha do espa&ccedil;o f&iacute;sico at&eacute; a capta&ccedil;&atilde;o de alunos
+            e a sa&uacute;de financeira do neg&oacute;cio.
           </p>
           <p>
-            No <strong>Picos do Saber</strong>, o PDI é o guia-mestre que orienta todas as
-            decisões estratégicas, desde a alocação de recursos até a expansão de cursos e
-            programas.
+            Diferente de planos plurianuais de grandes institui&ccedil;&otilde;es, este PDI &eacute;
+            enxuto e focado em entregas r&aacute;pidas: estruturar, validar, consolidar e, s&oacute;
+            ent&atilde;o, crescer com responsabilidade.
           </p>
         </div>
       </div>
@@ -122,20 +131,24 @@
 
     <section class="section section--dark">
       <div class="container">
-        <h2 class="section__title">Diretrizes Estratégicas</h2>
+        <h2 class="section__title">Diretrizes</h2>
         <div class="section__body">
-          <ul class="eixo-list">
+          <ul class="phase-list">
             <li>
-              <strong>Missão</strong>
-              Promover educação transformadora, formando cidadãos críticos e preparados para os desafios do século XXI.
+              <strong>Miss&atilde;o</strong>
+              Oferecer refor&ccedil;o escolar de qualidade, ajudando cada aluno a superar
+              dificuldades e ganhar confian&ccedil;a nos estudos.
             </li>
             <li>
-              <strong>Visão</strong>
-              Ser referência em desenvolvimento educacional na região até 2030, com excelência acadêmica e gestão inovadora.
+              <strong>Vis&atilde;o</strong>
+              Consolidar-se como refer&ecirc;ncia local em refor&ccedil;o escolar at&eacute;
+              o segundo ano de opera&ccedil;&atilde;o, com turmas cheias e opera&ccedil;&atilde;o
+              financeira saud&aacute;vel.
             </li>
             <li>
               <strong>Valores</strong>
-              Ética, inclusão, inovação, sustentabilidade e compromisso com a qualidade.
+              Did&aacute;tica acolhedora, compromisso com o aprendizado, transpar&ecirc;ncia
+              com as fam&iacute;lias e gest&atilde;o responsável dos recursos.
             </li>
           </ul>
         </div>
@@ -144,31 +157,38 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Eixos do PDI</h2>
-        <div class="section__body">
-          <ol class="eixo-list">
-            <li>
-              <strong>Ensino</strong>
-              Aprimoramento contínuo dos cursos, matrizes curriculares atualizadas e metodologias ativas de aprendizagem.
-            </li>
-            <li>
-              <strong>Pesquisa</strong>
-              Estímulo à produção científica, grupos de pesquisa e programas de iniciação científica.
-            </li>
-            <li>
-              <strong>Extensão</strong>
-              Projetos de impacto social, parcerias com a comunidade e estágios curriculares.
-            </li>
-            <li>
-              <strong>Gestão</strong>
-              Governança institucional, planejamento orçamentário e modernização administrativa.
-            </li>
-            <li>
-              <strong>Infraestrutura</strong>
-              Ampliação e modernização de espaços físicos, laboratórios e acervo bibliográfico.
-            </li>
-          </ol>
-        </div>
+        <h2 class="section__title">Fases de Implementa&ccedil;&atilde;o</h2>
+        <ol class="phase-list">
+          <li>
+            <strong>Fase 1 — Implanta&ccedil;&atilde;o (0 a 3 meses)</strong>
+            Estruturar identidade visual, espa&ccedil;o f&iacute;sico, site, processos de
+            matr&iacute;cula e rotina pedag&oacute;gica.
+            <span>Investimento inicial: ~R$ 16.500</span>
+          </li>
+          <li>
+            <strong>Fase 2 — Valida&ccedil;&atilde;o (3 a 6 meses)</strong>
+            Captar os primeiros alunos, testar pre&ccedil;o, ajustar opera&ccedil;&atilde;o
+            e atingir o ponto de equil&iacute;brio.
+            <span>Meta: 7 alunos — cobre a opera&ccedil;&atilde;o sem pr&oacute;-labore</span>
+          </li>
+          <li>
+            <strong>Fase 3 — Consolida&ccedil;&atilde;o (6 a 12 meses)</strong>
+            Chegar a 10 alunos, pagar custos + retirada b&aacute;sica da mantenedora,
+            criar reserva financeira.
+            <span>Meta: 10 alunos — opera&ccedil;&atilde;o saud&aacute;vel</span>
+          </li>
+          <li>
+            <strong>Fase 4 — Crescimento Respons&aacute;vel (12 a 18 meses)</strong>
+            Operar com folga, investir em melhorias e automatiza&ccedil;&otilde;es.
+            <span>Meta: 12 alunos — margem confort&aacute;vel</span>
+          </li>
+          <li>
+            <strong>Fase 5 — Expans&atilde;o (18+ meses)</strong>
+            S&oacute; contratar equipe ou ampliar estrutura se houver demanda firme
+            para 14+ alunos.
+            <span>Condi&ccedil;&atilde;o: demanda consistente antes de novos custos fixos</span>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -177,20 +197,20 @@
         <h2 class="section__title">Metas</h2>
         <div class="meta-grid">
           <div class="meta-card">
-            <p class="meta-card__pct">100%</p>
-            <p class="meta-card__label">Cursos com matriz atualizada até 2027</p>
+            <p class="meta-card__num">3 meses</p>
+            <p class="meta-card__label">Estruturar marca, espa&ccedil;o e site</p>
           </div>
           <div class="meta-card">
-            <p class="meta-card__pct">+50%</p>
-            <p class="meta-card__label">Aumento de projetos de extensão até 2028</p>
+            <p class="meta-card__num">7 alunos</p>
+            <p class="meta-card__label">Ponto de equil&iacute;brio at&eacute; o 6&ordm; m&ecirc;s</p>
           </div>
           <div class="meta-card">
-            <p class="meta-card__pct">95%</p>
-            <p class="meta-card__label">Satisfação docente e discente até 2029</p>
+            <p class="meta-card__num">10 alunos</p>
+            <p class="meta-card__label">Opera&ccedil;&atilde;o com retirada at&eacute; 12 meses</p>
           </div>
           <div class="meta-card">
-            <p class="meta-card__pct">30%</p>
-            <p class="meta-card__label">Expansão da infraestrutura até 2030</p>
+            <p class="meta-card__num">12 alunos</p>
+            <p class="meta-card__label">Margem saud&aacute;vel at&eacute; 18 meses</p>
           </div>
         </div>
       </div>
@@ -198,27 +218,27 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Cronograma do PDI</h2>
+        <h2 class="section__title">Cronograma</h2>
         <div class="timeline-pdi">
           <div class="timeline-pdi__item">
-            <h4>2025 — Diagnóstico</h4>
-            <p>Levantamento de dados institucionais, análise SWOT e consulta à comunidade.</p>
+            <h4>Meses 1 a 3 — Implanta&ccedil;&atilde;o</h4>
+            <p>Definir identidade, montar espa&ccedil;o, publicar site, registrar marca, iniciar divulga&ccedil;&atilde;o.</p>
           </div>
           <div class="timeline-pdi__item">
-            <h4>2026 — Elaboração</h4>
-            <p>Redação do PDI, definição de metas e aprovação nos conselhos.</p>
+            <h4>Meses 3 a 6 — Valida&ccedil;&atilde;o</h4>
+            <p>Captar alunos, ajustar precifica&ccedil;&atilde;o, acompanhar resultados pedag&oacute;gicos, atingir break-even.</p>
           </div>
           <div class="timeline-pdi__item">
-            <h4>2027-2028 — Implementação</h4>
-            <p>Execução das ações previstas nos eixos de ensino, pesquisa e extensão.</p>
+            <h4>Meses 6 a 12 — Consolida&ccedil;&atilde;o</h4>
+            <p>Estabilizar turmas, criar reserva, implementar processos de reten&ccedil;&atilde;o e satisfa&ccedil;&atilde;o.</p>
           </div>
           <div class="timeline-pdi__item">
-            <h4>2029 — Monitoramento</h4>
-            <p>Avaliação de indicadores, relatórios parciais e ajustes de rota.</p>
+            <h4>Meses 12 a 18 — Crescimento</h4>
+            <p>Avaliar demanda, automatizar gest&atilde;o, preparar pr&oacute;ximo ciclo.</p>
           </div>
           <div class="timeline-pdi__item">
-            <h4>2030 — Avaliação Final</h4>
-            <p>Prestação de contas, balanço do período e elaboração do próximo PDI.</p>
+            <h4>18+ meses — Expans&atilde;o</h4>
+            <p>Contratar equipe somente se houver fila de espera consistente por 2+ meses.</p>
           </div>
         </div>
       </div>

@@ -6,72 +6,93 @@
   <title>Financeiro — Picos do Saber</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
-    .indicator-grid {
+    .highlight-box {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--color-accent);
+    }
+    .highlight-box__value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    .highlight-box__label {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+    .cost-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1rem;
       margin: 1.5rem 0;
     }
-    .indicator-card {
+    .cost-card {
       background: var(--color-white);
       border-radius: var(--radius);
       padding: 1.25rem;
       box-shadow: var(--shadow);
-      text-align: center;
     }
-    .indicator-card__value {
-      font-size: 1.75rem;
+    .cost-card__title {
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.25rem;
+    }
+    .cost-card__value {
+      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--color-primary);
+      color: var(--color-text);
     }
-    .indicator-card__trend {
-      font-size: 0.85rem;
-    }
-    .indicator-card__trend--up { color: #27ae60; }
-    .indicator-card__trend--down { color: #e74c3c; }
-    .indicator-card__trend--stable { color: var(--color-accent); }
-    .indicator-card__label {
+    .cost-card__note {
       font-size: 0.85rem;
       color: var(--color-text-light);
-      margin-top: 0.25rem;
     }
-    .table-fin {
+    .scenario-table {
       width: 100%;
       border-collapse: collapse;
       margin: 1.5rem 0;
     }
-    .table-fin th,
-    .table-fin td {
+    .scenario-table th,
+    .scenario-table td {
       text-align: left;
       padding: 0.75rem;
       border-bottom: 1px solid #ddd;
     }
-    .table-fin th {
+    .scenario-table th {
       background: var(--color-primary-dark);
       color: var(--color-white);
     }
-    .table-fin tr:nth-child(even) {
+    .scenario-table tr:nth-child(even) {
       background: var(--color-bg);
     }
-    .report-list {
+    .scenario-table .highlight {
+      background: #fff8e1;
+      font-weight: 600;
+    }
+    .investment-breakdown {
       list-style: none;
       padding: 0;
     }
-    .report-list li {
-      padding: 1rem;
-      margin-bottom: 0.75rem;
-      background: var(--color-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--color-primary);
+    .investment-breakdown li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
     }
-    .report-list li strong {
+    .investment-breakdown li:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 1.1rem;
       color: var(--color-primary-dark);
+      padding-top: 0.75rem;
     }
-    .report-list li span {
-      display: block;
-      font-size: 0.85rem;
-      color: var(--color-text-light);
+    .investment-breakdown .item {
+      color: var(--color-text);
+    }
+    .investment-breakdown .value {
+      font-weight: 600;
     }
   </style>
 </head>
@@ -83,7 +104,7 @@
         <span class="logo__text">Picos do Saber</span>
       </div>
       <nav class="nav">
-        <a class="nav__link" href="../index.html">Início</a>
+        <a class="nav__link" href="../index.html">In&iacute;cio</a>
         <a class="nav__link" href="plano-diretor.html">Plano Diretor</a>
         <a class="nav__link nav__link--active" href="financeiro.html">Financeiro</a>
         <a class="nav__link" href="sistema.html">Sistema</a>
@@ -95,97 +116,94 @@
     <section class="hero" style="background:linear-gradient(135deg, #1a5276, #f1c40f);">
       <div class="container hero__inner">
         <h1 class="hero__title">Financeiro</h1>
-        <p class="hero__subtitle">Gestão Orçamentária e Prestação de Contas</p>
+        <p class="hero__subtitle">Planejamento Or&ccedil;ament&aacute;rio</p>
         <p class="hero__description">
-          Transparência, planejamento financeiro e indicadores de saúde econômica da instituição.
+          Investimento inicial, custos mensais, ponto de equil&iacute;brio e cen&aacute;rios
+          para o Picos do Saber.
         </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Orçamento</h2>
+        <h2 class="section__title">Investimento Inicial</h2>
         <div class="section__body">
           <p>
-            O orçamento do <strong>Picos do Saber</strong> é estruturado em programas e
-            ações alinhadas ao PDI. A execução orçamentária é acompanhada trimestralmente
-            pelos conselhos superiores.
+            O investimento para estruturar o Picos do Saber &eacute; enxuto e focado no
+            essencial para come&ccedil;ar a operar.
           </p>
         </div>
-        <table class="table-fin">
-          <thead>
-            <tr>
-              <th>Programa</th>
-              <th>Orçado (R$)</th>
-              <th>Executado (R$)</th>
-              <th>%</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ensino</td>
-              <td>1.200.000</td>
-              <td>980.000</td>
-              <td>81,7%</td>
-            </tr>
-            <tr>
-              <td>Pesquisa</td>
-              <td>600.000</td>
-              <td>420.000</td>
-              <td>70,0%</td>
-            </tr>
-            <tr>
-              <td>Extensão</td>
-              <td>400.000</td>
-              <td>310.000</td>
-              <td>77,5%</td>
-            </tr>
-            <tr>
-              <td>Infraestrutura</td>
-              <td>800.000</td>
-              <td>550.000</td>
-              <td>68,8%</td>
-            </tr>
-            <tr>
-              <td>Administração</td>
-              <td>500.000</td>
-              <td>480.000</td>
-              <td>96,0%</td>
-            </tr>
-            <tr style="font-weight:700;background:var(--color-bg-dark);">
-              <td>Total</td>
-              <td>3.500.000</td>
-              <td>2.740.000</td>
-              <td>78,3%</td>
-            </tr>
-          </tbody>
-        </table>
+        <ul class="investment-breakdown">
+          <li><span class="item">Estrutura&ccedil;&atilde;o do espa&ccedil;o (m&oacute;veis, lousa, arm&aacute;rio)</span><span class="value">R$ 6.500</span></li>
+          <li><span class="item">Equipamentos (computador, impressora, material did&aacute;tico)</span><span class="value">R$ 4.500</span></li>
+          <li><span class="item">Identidade visual e site</span><span class="value">R$ 2.000</span></li>
+          <li><span class="item">Taxas, registro e documenta&ccedil;&atilde;o</span><span class="value">R$ 1.500</span></li>
+          <li><span class="item">Reserva de capital de giro (3 meses)</span><span class="value">R$ 2.000</span></li>
+          <li><span class="item">Total</span><span class="value">R$ 16.500</span></li>
+        </ul>
       </div>
     </section>
 
     <section class="section section--dark">
       <div class="container">
-        <h2 class="section__title">Indicadores Financeiros</h2>
-        <div class="indicator-grid">
-          <div class="indicator-card">
-            <p class="indicator-card__value">78,3%</p>
-            <p class="indicator-card__trend indicator-card__trend--up">&#9650; +5,2%</p>
-            <p class="indicator-card__label">Execução orçamentária</p>
+        <h2 class="section__title">Custos Mensais</h2>
+        <div class="section__body">
+          <p>
+            Os custos fixos s&atilde;o enxutos para manter a opera&ccedil;&atilde;o
+            funcionando. Abaixo, dois cen&aacute;rios:
+          </p>
+        </div>
+        <h3 style="color:var(--color-primary-dark);margin-top:1.5rem;">Sem pr&oacute;-labore</h3>
+        <div class="cost-grid">
+          <div class="cost-card">
+            <p class="cost-card__title">Aluguel</p>
+            <p class="cost-card__value">R$ 1.500</p>
+            <p class="cost-card__note">Espa&ccedil;o pequeno, bairro central</p>
           </div>
-          <div class="indicator-card">
-            <p class="indicator-card__value">R$ 760K</p>
-            <p class="indicator-card__trend indicator-card__trend--stable">&#9644; Estável</p>
-            <p class="indicator-card__label">Saldo disponível</p>
+          <div class="cost-card">
+            <p class="cost-card__title">&Aacute;gua e energia</p>
+            <p class="cost-card__value">R$ 250</p>
+            <p class="cost-card__note">M&eacute;dia mensal estimada</p>
           </div>
-          <div class="indicator-card">
-            <p class="indicator-card__value">94%</p>
-            <p class="indicator-card__trend indicator-card__trend--up">&#9650; +2,1%</p>
-            <p class="indicator-card__label">Comprometimento da receita</p>
+          <div class="cost-card">
+            <p class="cost-card__title">Internet e telefone</p>
+            <p class="cost-card__value">R$ 150</p>
+            <p class="cost-card__note">Plano comercial b&aacute;sico</p>
           </div>
-          <div class="indicator-card">
-            <p class="indicator-card__value">6,2%</p>
-            <p class="indicator-card__trend indicator-card__trend--down">&#9660; -0,8%</p>
-            <p class="indicator-card__label">Inadimplência</p>
+          <div class="cost-card">
+            <p class="cost-card__title">Material did&aacute;tico</p>
+            <p class="cost-card__value">R$ 400</p>
+            <p class="cost-card__note">Impress&otilde;es, apostilas, papelaria</p>
+          </div>
+          <div class="cost-card">
+            <p class="cost-card__title">Marketing e divulga&ccedil;&atilde;o</p>
+            <p class="cost-card__value">R$ 320</p>
+            <p class="cost-card__note">Redes sociais, panfletos, an&uacute;ncios</p>
+          </div>
+          <div class="cost-card">
+            <p class="cost-card__title">Auxiliar (meio per&iacute;odo)</p>
+            <p class="cost-card__value">R$ 1.250</p>
+            <p class="cost-card__note">Suporte administrativo e limpeza</p>
+          </div>
+          <div class="cost-card">
+            <p class="cost-card__title">Imprevistos / manuten&ccedil;&atilde;o</p>
+            <p class="cost-card__value">R$ 500</p>
+            <p class="cost-card__note">Reserva para emerg&ecirc;ncias</p>
+          </div>
+          <div class="cost-card" style="border-left:4px solid var(--color-accent);">
+            <p class="cost-card__title" style="font-weight:700;">Total mensal</p>
+            <p class="cost-card__value" style="color:var(--color-primary);">R$ 4.870</p>
+            <p class="cost-card__note">Sem retirada da mantenedora</p>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:2rem;">
+          <h3 style="color:var(--color-primary-dark);margin-bottom:0.5rem;">Com pr&oacute;-labore da mantenedora</h3>
+          <p>
+            Acrescente <strong>R$ 1.600</strong> de retirada b&aacute;sica para a dona.
+          </p>
+          <div style="display:flex;align-items:baseline;gap:1rem;margin-top:0.75rem;">
+            <span class="highlight-box__value">R$ 6.470</span>
+            <span class="highlight-box__label">custo mensal total</span>
           </div>
         </div>
       </div>
@@ -193,41 +211,116 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Prestação de Contas</h2>
+        <h2 class="section__title">Ponto de Equil&iacute;brio</h2>
         <div class="section__body">
           <p>
-            A prestação de contas é realizada anualmente e submetida à aprovação dos
-            órgãos colegiados. Os relatórios financeiros ficam disponíveis para consulta
-            da comunidade acadêmica.
+            Considerando uma mensalidade de <strong>R$ 700</strong> por aluno:
           </p>
         </div>
-        <ul class="report-list">
-          <li>
-            <strong>Relatório Anual 2025</strong>
-            <span>Exercício encerrado em dez/2025 — Aprovado pelo Conselho Superior</span>
-          </li>
-          <li>
-            <strong>Relatório Trimestral 2026 — 1&ordm; Trimestre</strong>
-            <span>Período: jan-mar/2026 — Em auditoria interna</span>
-          </li>
-          <li>
-            <strong>Relatório Trimestral 2026 — 2&ordm; Trimestre</strong>
-            <span>Período: abr-jun/2026 — Em elaboração</span>
-          </li>
-        </ul>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;margin:1.5rem 0;">
+          <div class="highlight-box">
+            <span class="highlight-box__value">7 alunos</span>
+            <span class="highlight-box__label">Pagam a opera&ccedil;&atilde;o (R$ 4.870)</span>
+            <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:0.5rem;">
+              Ponto de equil&iacute;brio sem pr&oacute;-labore
+            </p>
+          </div>
+          <div class="highlight-box" style="border-left-color:var(--color-primary);">
+            <span class="highlight-box__value">10 alunos</span>
+            <span class="highlight-box__label">Pagam opera&ccedil;&atilde;o + retirada (R$ 6.470)</span>
+            <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:0.5rem;">
+              Ponto de equil&iacute;brio com pr&oacute;-labore
+            </p>
+          </div>
+          <div class="highlight-box" style="border-left-color:var(--color-primary);">
+            <span class="highlight-box__value">12 alunos</span>
+            <span class="highlight-box__label">R$ 8.400 de receita — folga de R$ 1.930</span>
+            <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:0.5rem;">
+              Opera&ccedil;&atilde;o saud&aacute;vel com reserva
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section section--dark">
       <div class="container">
-        <h2 class="section__title">Próximos Passos</h2>
-        <div class="section__body">
-          <ul>
-            <li>Implementar dashboard financeiro com dados em tempo real.</li>
-            <li>Automatizar a geração de relatórios de execução orçamentária.</li>
-            <li>Integrar módulo financeiro ao sistema acadêmico.</li>
-            <li>Publicar série histórica de indicadores para transparência ativa.</li>
-          </ul>
+        <h2 class="section__title">Cen&aacute;rios</h2>
+        <table class="scenario-table">
+          <thead>
+            <tr>
+              <th>Alunos</th>
+              <th>Receita (R$)</th>
+              <th>Custo (R$)</th>
+              <th>Resultado (R$)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>3.500</td>
+              <td>4.870</td>
+              <td style="color:#e74c3c;">-1.370</td>
+              <td>Deficit&aacute;rio</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>4.900</td>
+              <td>4.870</td>
+              <td style="color:#27ae60;">+30</td>
+              <td>Equil&iacute;brio</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>7.000</td>
+              <td>6.470</td>
+              <td style="color:#27ae60;">+530</td>
+              <td>Com retirada</td>
+            </tr>
+            <tr class="highlight">
+              <td>12</td>
+              <td>8.400</td>
+              <td>6.470</td>
+              <td style="color:#27ae60;">+1.930</td>
+              <td>Saud&aacute;vel</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>9.800</td>
+              <td>8.000*</td>
+              <td style="color:#27ae60;">+1.800</td>
+              <td>Exige novo custo</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:0.5rem;">
+          *A partir de 14 alunos, &eacute; necess&aacute;rio contratar mais um professor,
+          elevando o custo fixo.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Resumo Financeiro</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;">
+          <div class="highlight-box" style="border-left-color:var(--color-primary);">
+            <span class="highlight-box__value">R$ 16.500</span>
+            <span class="highlight-box__label">Investimento inicial</span>
+          </div>
+          <div class="highlight-box" style="border-left-color:var(--color-primary);">
+            <span class="highlight-box__value">R$ 700</span>
+            <span class="highlight-box__label">Mensalidade por aluno</span>
+          </div>
+          <div class="highlight-box" style="border-left-color:var(--color-primary);">
+            <span class="highlight-box__value">7 a 10</span>
+            <span class="highlight-box__label">Alunos para break-even</span>
+          </div>
+          <div class="highlight-box" style="border-left-color:var(--color-primary);">
+            <span class="highlight-box__value">12 a 18</span>
+            <span class="highlight-box__label">Meses para consolida&ccedil;&atilde;o</span>
+          </div>
         </div>
       </div>
     </section>
