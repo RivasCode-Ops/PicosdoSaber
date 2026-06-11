@@ -1,0 +1,38 @@
+PICOS DO SABER — CRM operacional (modelo)
+=========================================
+
+Arquivo no repositório: CRM-Template.xlsx (somente estrutura e exemplos fictícios)
+
+IMPORTANTE — PRIVACIDADE
+------------------------
+Nao use esta planilha do GitHub para dados reais de alunos e familias.
+Copie o template para Google Sheets ou Drive privado e trabalhe la.
+
+Como comecar
+------------
+1. Baixe CRM-Template.xlsx ou gere de novo: python gerar-crm-planilha.py
+2. Faca upload para Google Sheets (conta privada) ou OneDrive.
+3. Leia MODELO-DE-TURMAS.md e cadastre as turmas na aba "Turmas e Vagas".
+4. Apague a linha de exemplo na aba "CRM Leads" antes de usar.
+5. Cada contato do site/WhatsApp vira uma linha no CRM Leads.
+
+Rotina diaria
+-------------
+Site -> WhatsApp -> CRM Leads -> Contato -> Visita -> Avaliacao -> Turma -> Matricula
+
+Abas
+----
+1. Dashboard     — indicadores automaticos
+2. CRM Leads     — funil comercial
+3. Turmas e Vagas — capacidade e vagas livres
+4. Matriculas    — alunos confirmados
+5. Lista de Espera — fila separada do CRM
+
+Status permitidos (CRM Leads)
+-----------------------------
+Interessado | Contato realizado | Visita agendada | Avaliacao realizada
+Matricula realizada | Nao interessado | Lista de espera
+
+Regenerar template
+------------------
+python gerar-crm-planilha.py
