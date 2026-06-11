@@ -256,8 +256,10 @@
           </div>
           <div class="form__group">
             <label class="form__label" for="serie">S&eacute;rie / ano</label>
-            <select class="form__select" id="serie" name="serie">
+            <select class="form__select" id="serie" name="serie" required>
               <option value="">Selecione</option>
+              <option>4&ordm; ano fundamental</option>
+              <option>5&ordm; ano fundamental</option>
               <option>6&ordm; ano fundamental</option>
               <option>7&ordm; ano fundamental</option>
               <option>8&ordm; ano fundamental</option>
@@ -265,11 +267,24 @@
               <option>1&ordm; ano ensino m&eacute;dio</option>
               <option>2&ordm; ano ensino m&eacute;dio</option>
               <option>3&ordm; ano ensino m&eacute;dio</option>
+              <option>Refor&ccedil;o para provas</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="dificuldade">Principal dificuldade</label>
+            <select class="form__select" id="dificuldade" name="dificuldade" required>
+              <option value="">Selecione</option>
+              <option>Matem&aacute;tica</option>
+              <option>Portugu&ecirc;s / leitura</option>
+              <option>Ci&ecirc;ncias</option>
+              <option>Organiza&ccedil;&atilde;o e estudos</option>
+              <option>M&uacute;ltiplas disciplinas</option>
+              <option>Outro</option>
             </select>
           </div>
           <div class="form__group">
             <label class="form__label" for="turno">Turno de interesse</label>
-            <select class="form__select" id="turno" name="turno">
+            <select class="form__select" id="turno" name="turno" required>
               <option value="">Selecione</option>
               <option>Manh&atilde;</option>
               <option>Tarde</option>
@@ -285,6 +300,10 @@
             <textarea class="form__textarea" id="observacoes" name="observacoes" placeholder="Alguma informa&ccedil;&atilde;o extra?"></textarea>
           </div>
           <button class="form__submit" type="submit">Enviar pr&eacute;-matr&iacute;cula</button>
+          <p class="form__footnote">
+            Seus dados ser&atilde;o utilizados exclusivamente para contato sobre informa&ccedil;&otilde;es,
+            avalia&ccedil;&atilde;o e pr&eacute;-matr&iacute;cula no Picos do Saber.
+          </p>
           <p class="form__footnote">
             Ap&oacute;s o envio, entraremos em contato para confirmar dados, hor&aacute;rios
             e concluir a matr&iacute;cula.
@@ -311,13 +330,13 @@
     <div class="container footer__inner">
       <p>&copy; 2026 Picos do Saber &mdash; Refor&ccedil;o escolar em Picos-PI</p>
       <ul class="footer__links">
-        <li><a href="pages/plano-diretor.html">Plano Diretor</a></li>
-        <li><a href="pages/financeiro.html">Financeiro</a></li>
-        <li><a href="pages/sistema.html">Sistema</a></li>
-        <li><a href="pages/timeline.html">Timeline</a></li>
+        <li><a href="pages/marca.html">Marca</a></li>
+        <li><a href="pages/documentos-visuais.html">Galeria</a></li>
+        <li><a href="index.html#pre-matricula">Pr&eacute;-matr&iacute;cula</a></li>
       </ul>
     </div>
   </footer>
+<script src="assets/js/site-config.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

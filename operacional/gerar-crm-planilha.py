@@ -20,6 +20,29 @@ STATUS_LABELS = [
     "\u26ab Lista de espera",
 ]
 
+# Mesma lista do formulario do site (index.html) e MODELO-DE-TURMAS.md
+SERIES = [
+    "4\u00ba ano fundamental",
+    "5\u00ba ano fundamental",
+    "6\u00ba ano fundamental",
+    "7\u00ba ano fundamental",
+    "8\u00ba ano fundamental",
+    "9\u00ba ano fundamental",
+    "1\u00ba ano ensino m\u00e9dio",
+    "2\u00ba ano ensino m\u00e9dio",
+    "3\u00ba ano ensino m\u00e9dio",
+    "Refor\u00e7o para provas",
+]
+
+DIFICULDADES = [
+    "Matem\u00e1tica",
+    "Portugu\u00eas / leitura",
+    "Ci\u00eancias",
+    "Organiza\u00e7\u00e3o e estudos",
+    "M\u00faltiplas disciplinas",
+    "Outro",
+]
+
 HEADER_FILL = PatternFill("solid", fgColor="1B4332")
 HEADER_FONT = Font(bold=True, color="FFFFFF")
 TITLE_FONT = Font(bold=True, size=14, color="1B4332")
@@ -98,8 +121,8 @@ def build_crm(wb):
         "EXEMPLO — apagar antes de usar",
         "(89) 90000-0000",
         "EXEMPLO — apagar",
-        "6o ano",
-        "Matematica",
+        "6\u00ba ano fundamental",
+        "Matem\u00e1tica",
         "Tarde",
         "Site",
         STATUS_LABELS[0],
@@ -120,6 +143,8 @@ def build_crm(wb):
     dv_status.add("I2:I500")
 
     for col, options in {
+        "E": ",".join(SERIES),
+        "F": ",".join(DIFICULDADES),
         "G": "Manha,Tarde,Noite",
         "H": "Site,Indicacao,Redes sociais,Panfleto,WhatsApp direto,Outro",
     }.items():

@@ -6,6 +6,25 @@ Documento estratégico de oferta pedagógica. A planilha `CRM-Template.xlsx` con
 
 **Máximo por turma:** 8 alunos
 
+## Séries no formulário do site e no CRM
+
+Fonte única — o site, a planilha e o atendimento usam a mesma lista:
+
+- 4º ano fundamental
+- 5º ano fundamental
+- 6º ano fundamental
+- 7º ano fundamental
+- 8º ano fundamental
+- 9º ano fundamental
+- 1º ano ensino médio
+- 2º ano ensino médio
+- 3º ano ensino médio
+- Reforço para provas
+
+**Dificuldade principal (formulário / CRM):** Matemática · Português / leitura · Ciências · Organização e estudos · Múltiplas disciplinas · Outro
+
+**Origem padrão do site:** Site
+
 ## Oferta planejada
 
 ### Manhã
