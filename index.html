@@ -3,125 +3,283 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Picos do Saber</title>
+  <title>Picos do Saber — Reforço Escolar em Picos-PI</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .hero--home .hero__cta {
+      font-size: 1.15rem;
+      padding: 0.85rem 2.5rem;
+    }
+    .hero--home .hero__small {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      margin-top: 0.75rem;
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .checklist li {
+      padding: 0.4rem 0 0.4rem 1.5rem;
+      position: relative;
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+    }
+    .form {
+      max-width: 560px;
+      margin: 1.5rem 0;
+    }
+    .form__group {
+      margin-bottom: 1rem;
+    }
+    .form__label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.25rem;
+    }
+    .form__input,
+    .form__select,
+    .form__textarea {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      font-family: var(--font-base);
+      font-size: 0.95rem;
+      background: var(--color-white);
+    }
+    .form__input:focus,
+    .form__select:focus,
+    .form__textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(45,106,79,0.15);
+    }
+    .form__textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .form__submit {
+      background: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .form__submit:hover {
+      background: var(--color-primary-dark);
+    }
+    .form__footnote {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: 0.75rem;
+    }
+    .section--hero-cta {
+      background: var(--color-white);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid #e0e0e0;
+    }
+    .section--hero-cta .hero__cta {
+      font-size: 1.1rem;
+      padding: 0.85rem 2.5rem;
+    }
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
       <div class="logo">
         <img src="assets/img/logo-picos-do-saber.png" alt="Picos do Saber">
-        
       </div>
       <nav class="nav" aria-label="Navegação principal">
         <a class="nav__link nav__link--active" href="index.html">Início</a>
+        <a class="nav__link" href="#quem-atendemos">Quem atendemos</a>
+        <a class="nav__link" href="#como-funciona">Como funciona</a>
+        <a class="nav__link" href="#pre-matricula">Pré-matrícula</a>
         <a class="nav__link" href="pages/marca.html">Marca</a>
-        <a class="nav__link" href="pages/plano-diretor.html">Plano Diretor</a>
-        <a class="nav__link" href="pages/financeiro.html">Financeiro</a>
-        <a class="nav__link" href="pages/sistema.html">Sistema</a>
-        <a class="nav__link" href="pages/timeline.html">Timeline</a>
-        <a class="nav__link" href="pages/documentos-visuais.html">Docs Visuais</a>
+        <a class="nav__link" href="pages/documentos-visuais.html">Galeria</a>
       </nav>
       <button class="nav__toggle">&#x2630;</button>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero--home">
       <div class="container hero__inner">
-        <h1 class="hero__title">Picos do Saber</h1>
-        <p class="hero__subtitle">Centro de Desenvolvimento Educacional</p>
-        <p class="hero__description">
-          Portal do projeto que reúne a identidade da marca, o plano de implementação,
-          a gestão financeira e o ecossistema digital do reforço escolar.
+        <h1 class="hero__title">Reforço escolar em Picos com acompanhamento de verdade</h1>
+        <p class="hero__subtitle">
+          Aulas de apoio para alunos que precisam reforçar conteúdos, melhorar o desempenho e estudar com mais segurança.
         </p>
-        <a class="hero__cta" href="#paginas">Explorar</a>
+        <a class="hero__cta whatsapp-link" href="https://wa.me/5586999999999" target="_blank">Falar no WhatsApp</a>
+        <p class="hero__small">
+          Tire d&uacute;vidas, veja vagas dispon&iacute;veis e receba o passo a passo da matr&iacute;cula.
+        </p>
       </div>
     </section>
 
-    <section id="sobre" class="section">
+    <section id="quem-atendemos" class="section">
       <div class="container">
-        <h2 class="section__title">Sobre o Projeto</h2>
+        <h2 class="section__title">Quem atendemos</h2>
         <div class="section__body">
           <p>
-            O <strong>Picos do Saber</strong> é um centro de reforço escolar em fase de
-            implantação. Este site funciona como o portal central do projeto, reunindo a
-            documentação da marca, o planejamento estratégico, as projeções financeiras
-            e os módulos do sistema que sustentarão a operação.
+            Atendemos alunos do ensino fundamental e m&eacute;dio que precisam de refor&ccedil;o
+            nas principais disciplinas, seja para recuperar notas, acompanhar a turma ou se
+            preparar melhor para provas e avalia&ccedil;&otilde;es.
           </p>
+          <ul class="checklist">
+            <li>Alunos com dificuldade em acompanhar o conte&uacute;do.</li>
+            <li>Estudantes que precisam refor&ccedil;ar matem&aacute;tica, portugu&ecirc;s e reda&ccedil;&atilde;o.</li>
+            <li>Fam&iacute;lias que buscam acompanhamento mais pr&oacute;ximo e organizado.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Como funciona o refor&ccedil;o</h2>
+        <div class="section__body">
           <p>
-            Tudo aqui é construído de forma incremental &mdash; cada página reflete uma
-            camada do projeto, começando pela identidade visual e avançando até as
-            automações e o portal do aluno.
+            As aulas acontecem em turnos definidos, com turmas pequenas e acompanhamento
+            cont&iacute;nuo, para que cada aluno receba a aten&ccedil;&atilde;o necess&aacute;ria.
           </p>
+          <ul class="checklist">
+            <li>Aulas presenciais em Picos-PI, em ambiente organizado e acolhedor.</li>
+            <li>Turmas com n&uacute;mero limitado de alunos por hor&aacute;rio.</li>
+            <li>Planejamento semanal de conte&uacute;dos e atividades.</li>
+            <li>Acompanhamento da evolu&ccedil;&atilde;o de cada aluno.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="paginas" class="section section--dark">
+    <section class="section">
       <div class="container">
-        <h2 class="section__title">Páginas</h2>
-        <div class="cards">
-          <article class="card">
-            <div class="card__icon">&#x1F3F7;</div>
-            <h3 class="card__title">Marca</h3>
-            <p class="card__text">Identidade visual, conceito da marca, paleta de cores e guia de uso.</p>
-            <a class="card__link" href="pages/marca.html">Acessar &rarr;</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#x1F3ED;</div>
-            <h3 class="card__title">Plano Diretor</h3>
-            <p class="card__text">Fases de implantação, metas de curto a médio prazo e cronograma do projeto.</p>
-            <a class="card__link" href="pages/plano-diretor.html">Acessar &rarr;</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#x1F4B0;</div>
-            <h3 class="card__title">Financeiro</h3>
-            <p class="card__text">Investimento inicial, custos mensais, ponto de equilíbrio e cenários.</p>
-            <a class="card__link" href="pages/financeiro.html">Acessar &rarr;</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#x1F4E6;</div>
-            <h3 class="card__title">Sistema</h3>
-            <p class="card__text">Módulos do ecossistema digital: site, CRM, matrícula, financeiro e automações.</p>
-            <a class="card__link" href="pages/sistema.html">Acessar &rarr;</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#x1F4C5;</div>
-            <h3 class="card__title">Timeline</h3>
-            <p class="card__text">Histórico de marcos, versões publicadas e próximos passos do projeto.</p>
-            <a class="card__link" href="pages/timeline.html">Acessar &rarr;</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">&#x1F4F7;</div>
-            <h3 class="card__title">Documentos Visuais</h3>
-            <p class="card__text">Logo oficial, versões da marca, infográficos e materiais de divulgação.</p>
-            <a class="card__link" href="pages/documentos-visuais.html">Acessar &rarr;</a>
-          </article>
+        <h2 class="section__title">Disciplinas e apoio oferecidos</h2>
+        <div class="section__body">
+          <p>
+            O foco &eacute; fortalecer as bases nas &aacute;reas em que o aluno mais precisa,
+            sempre alinhado ao que ele est&aacute; vendo na escola.
+          </p>
+          <ul class="checklist">
+            <li>Matem&aacute;tica.</li>
+            <li>Portugu&ecirc;s e produ&ccedil;&atilde;o de texto.</li>
+            <li>Ci&ecirc;ncias e demais disciplinas, conforme demanda.</li>
+            <li>Apoio em tarefas de casa e trabalhos.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section section--warning">
+    <section class="section section--dark">
       <div class="container">
-        <h2 class="section__title">Em Construção</h2>
-        <div class="construction">
-          <p class="construction__text">
-            O projeto avança por versões. A estrutura principal já está no ar e os
-            próximos ciclos vão preencher conteúdo e funcionalidades.
+        <h2 class="section__title">Para as fam&iacute;lias, mais seguran&ccedil;a e informa&ccedil;&atilde;o</h2>
+        <div class="section__body">
+          <p>
+            Al&eacute;m das aulas, o refor&ccedil;o oferece organiza&ccedil;&atilde;o e
+            comunica&ccedil;&atilde;o clara com os respons&aacute;veis, para que todos
+            acompanhem a evolu&ccedil;&atilde;o do aluno.
           </p>
-          <div class="construction__bar">
-            <span class="construction__progress" style="width: 40%;"></span>
+          <ul class="checklist">
+            <li>Informa&ccedil;&otilde;es sobre frequ&ecirc;ncia e participa&ccedil;&atilde;o.</li>
+            <li>Canal direto para d&uacute;vidas e orienta&ccedil;&otilde;es.</li>
+            <li>Regras claras de matr&iacute;cula, reposi&ccedil;&atilde;o e pagamento.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="pre-matricula" class="section">
+      <div class="container">
+        <h2 class="section__title">Fa&ccedil;a a pr&eacute;-matr&iacute;cula</h2>
+        <div class="section__body">
+          <p>
+            Preencha seus dados para reservar uma vaga ou receber contato sobre hor&aacute;rios
+            e turmas dispon&iacute;veis.
+          </p>
+        </div>
+        <form class="form" action="#" method="post">
+          <div class="form__group">
+            <label class="form__label" for="responsavel">Nome do respons&aacute;vel</label>
+            <input class="form__input" type="text" id="responsavel" name="responsavel" required>
           </div>
-          <p class="construction__label">Versão 0.3 &mdash; Estrutura completa, refinamento em andamento</p>
-        </div>
+          <div class="form__group">
+            <label class="form__label" for="aluno">Nome do aluno</label>
+            <input class="form__input" type="text" id="aluno" name="aluno" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="serie">S&eacute;rie / ano</label>
+            <select class="form__select" id="serie" name="serie">
+              <option value="">Selecione</option>
+              <option>6&ordm; ano fundamental</option>
+              <option>7&ordm; ano fundamental</option>
+              <option>8&ordm; ano fundamental</option>
+              <option>9&ordm; ano fundamental</option>
+              <option>1&ordm; ano ensino m&eacute;dio</option>
+              <option>2&ordm; ano ensino m&eacute;dio</option>
+              <option>3&ordm; ano ensino m&eacute;dio</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="turno">Turno de interesse</label>
+            <select class="form__select" id="turno" name="turno">
+              <option value="">Selecione</option>
+              <option>Manh&atilde;</option>
+              <option>Tarde</option>
+              <option>Noite</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="telefone">Telefone / WhatsApp</label>
+            <input class="form__input" type="tel" id="telefone" name="telefone" placeholder="(86) 9xxxx-xxxx" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="observacoes">Observa&ccedil;&otilde;es</label>
+            <textarea class="form__textarea" id="observacoes" name="observacoes" placeholder="Alguma informa&ccedil;&atilde;o extra?"></textarea>
+          </div>
+          <button class="form__submit" type="submit">Enviar pr&eacute;-matr&iacute;cula</button>
+          <p class="form__footnote">
+            Ap&oacute;s o envio, entraremos em contato para confirmar dados, hor&aacute;rios
+            e concluir a matr&iacute;cula.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--hero-cta">
+      <div class="container">
+        <p style="margin-bottom:1rem;font-size:1.1rem;">
+          Quer saber mais? Fale direto conosco no WhatsApp.
+        </p>
+        <a class="hero__cta whatsapp-link" href="https://wa.me/5586999999999" target="_blank">Falar no WhatsApp</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; 2026 Picos do Saber. Em desenvolvimento.</p>
+      <p>&copy; 2026 Picos do Saber. Refor&ccedil;o escolar &mdash; Picos-PI.</p>
     </div>
   </footer>
 <script src="assets/js/main.js"></script>
