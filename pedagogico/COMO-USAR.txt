@@ -1,0 +1,26 @@
+PICOS DO SABER — Camada pedagogica
+===================================
+
+Esta pasta documenta o acompanhamento individualizado prometido no site.
+Nao substitui o CRM (operacional/) nem o site publico.
+
+Arquivos
+--------
+METODOLOGIA-PICOS-DO-SABER.md  — documento-mae (leia primeiro)
+CRITERIOS-DE-EVOLUCAO.md       — criterios de progresso por aluno
+FICHA-AVALIACAO-INICIAL.md   — diagnostico na entrada
+PDI-MODELO.md                — Plano de Desenvolvimento Individual
+RELATORIO-MENSAL-ALUNO.md    — comunicacao com a familia
+PLANO-DE-AULA-MODELO.md      — rotina de aula de reforco
+
+Uso
+---
+1. Copie o modelo para cada aluno (Drive/OneDrive privado).
+2. Preencha na avaliacao inicial e revise mensalmente.
+3. Use o relatorio mensal para conversas com responsaveis.
+4. Nunca versione no GitHub dados reais de alunos.
+
+Conversao
+---------
+Exporte .md para PDF ou DOCX quando precisar imprimir ou assinar.
+Os nomes originais sugeridos (.pdf, .docx) referem-se ao formato final de uso.
