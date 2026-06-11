@@ -9,17 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var header = document.querySelector('.header--transparent');
-  if (header) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 80) {
-        header.classList.add('header--scrolled');
-      } else {
-        header.classList.remove('header--scrolled');
-      }
-    });
-  }
-
   var form = document.getElementById('form-pre-matricula');
   if (form) {
     form.addEventListener('submit', function (e) {

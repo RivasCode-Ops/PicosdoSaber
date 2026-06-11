@@ -244,43 +244,6 @@ body {
   margin-top: 0.75rem;
 }
 
-/* Transparent header */
-.header--transparent {
-  background: transparent;
-  box-shadow: none;
-}
-
-.header--transparent .nav__link {
-  color: var(--color-white);
-}
-
-.header--transparent .nav__link--active,
-.header--transparent .nav__link:hover {
-  border-bottom-color: var(--color-white);
-}
-
-.header--transparent .nav__toggle {
-  color: var(--color-white);
-}
-
-.header--transparent.header--scrolled {
-  background: var(--color-white);
-  box-shadow: var(--shadow);
-}
-
-.header--transparent.header--scrolled .nav__link {
-  color: var(--color-text);
-}
-
-.header--transparent.header--scrolled .nav__link--active,
-.header--transparent.header--scrolled .nav__link:hover {
-  border-bottom-color: var(--color-primary);
-}
-
-.header--transparent.header--scrolled .nav__toggle {
-  color: var(--color-primary-dark);
-}
-
 /* Sections */
 .section {
   padding: 3.5rem 1.5rem;
