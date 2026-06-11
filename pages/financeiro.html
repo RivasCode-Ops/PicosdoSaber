@@ -5,6 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Financeiro — Picos do Saber</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .indicator-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .indicator-card__value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    .indicator-card__trend {
+      font-size: 0.85rem;
+    }
+    .indicator-card__trend--up { color: #27ae60; }
+    .indicator-card__trend--down { color: #e74c3c; }
+    .indicator-card__trend--stable { color: var(--color-accent); }
+    .indicator-card__label {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: 0.25rem;
+    }
+    .table-fin {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .table-fin th,
+    .table-fin td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-fin th {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+    }
+    .table-fin tr:nth-child(even) {
+      background: var(--color-bg);
+    }
+    .report-list {
+      list-style: none;
+      padding: 0;
+    }
+    .report-list li {
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      background: var(--color-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--color-primary);
+    }
+    .report-list li strong {
+      color: var(--color-primary-dark);
+    }
+    .report-list li span {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -15,20 +84,155 @@
       </div>
       <nav class="nav">
         <a class="nav__link" href="../index.html">Início</a>
+        <a class="nav__link" href="plano-diretor.html">Plano Diretor</a>
         <a class="nav__link nav__link--active" href="financeiro.html">Financeiro</a>
+        <a class="nav__link" href="sistema.html">Sistema</a>
       </nav>
     </div>
   </header>
+
   <main>
+    <section class="hero" style="background:linear-gradient(135deg, #1a5276, #f1c40f);">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Financeiro</h1>
+        <p class="hero__subtitle">Gestão Orçamentária e Prestação de Contas</p>
+        <p class="hero__description">
+          Transparência, planejamento financeiro e indicadores de saúde econômica da instituição.
+        </p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <h1 class="section__title">Financeiro</h1>
+        <h2 class="section__title">Orçamento</h2>
         <div class="section__body">
-          <p>Orçamento, prestação de contas e indicadores financeiros. <em>Em construção.</em></p>
+          <p>
+            O orçamento do <strong>Picos do Saber</strong> é estruturado em programas e
+            ações alinhadas ao PDI. A execução orçamentária é acompanhada trimestralmente
+            pelos conselhos superiores.
+          </p>
+        </div>
+        <table class="table-fin">
+          <thead>
+            <tr>
+              <th>Programa</th>
+              <th>Orçado (R$)</th>
+              <th>Executado (R$)</th>
+              <th>%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ensino</td>
+              <td>1.200.000</td>
+              <td>980.000</td>
+              <td>81,7%</td>
+            </tr>
+            <tr>
+              <td>Pesquisa</td>
+              <td>600.000</td>
+              <td>420.000</td>
+              <td>70,0%</td>
+            </tr>
+            <tr>
+              <td>Extensão</td>
+              <td>400.000</td>
+              <td>310.000</td>
+              <td>77,5%</td>
+            </tr>
+            <tr>
+              <td>Infraestrutura</td>
+              <td>800.000</td>
+              <td>550.000</td>
+              <td>68,8%</td>
+            </tr>
+            <tr>
+              <td>Administração</td>
+              <td>500.000</td>
+              <td>480.000</td>
+              <td>96,0%</td>
+            </tr>
+            <tr style="font-weight:700;background:var(--color-bg-dark);">
+              <td>Total</td>
+              <td>3.500.000</td>
+              <td>2.740.000</td>
+              <td>78,3%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Indicadores Financeiros</h2>
+        <div class="indicator-grid">
+          <div class="indicator-card">
+            <p class="indicator-card__value">78,3%</p>
+            <p class="indicator-card__trend indicator-card__trend--up">&#9650; +5,2%</p>
+            <p class="indicator-card__label">Execução orçamentária</p>
+          </div>
+          <div class="indicator-card">
+            <p class="indicator-card__value">R$ 760K</p>
+            <p class="indicator-card__trend indicator-card__trend--stable">&#9644; Estável</p>
+            <p class="indicator-card__label">Saldo disponível</p>
+          </div>
+          <div class="indicator-card">
+            <p class="indicator-card__value">94%</p>
+            <p class="indicator-card__trend indicator-card__trend--up">&#9650; +2,1%</p>
+            <p class="indicator-card__label">Comprometimento da receita</p>
+          </div>
+          <div class="indicator-card">
+            <p class="indicator-card__value">6,2%</p>
+            <p class="indicator-card__trend indicator-card__trend--down">&#9660; -0,8%</p>
+            <p class="indicator-card__label">Inadimplência</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Prestação de Contas</h2>
+        <div class="section__body">
+          <p>
+            A prestação de contas é realizada anualmente e submetida à aprovação dos
+            órgãos colegiados. Os relatórios financeiros ficam disponíveis para consulta
+            da comunidade acadêmica.
+          </p>
+        </div>
+        <ul class="report-list">
+          <li>
+            <strong>Relatório Anual 2025</strong>
+            <span>Exercício encerrado em dez/2025 — Aprovado pelo Conselho Superior</span>
+          </li>
+          <li>
+            <strong>Relatório Trimestral 2026 — 1&ordm; Trimestre</strong>
+            <span>Período: jan-mar/2026 — Em auditoria interna</span>
+          </li>
+          <li>
+            <strong>Relatório Trimestral 2026 — 2&ordm; Trimestre</strong>
+            <span>Período: abr-jun/2026 — Em elaboração</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Próximos Passos</h2>
+        <div class="section__body">
+          <ul>
+            <li>Implementar dashboard financeiro com dados em tempo real.</li>
+            <li>Automatizar a geração de relatórios de execução orçamentária.</li>
+            <li>Integrar módulo financeiro ao sistema acadêmico.</li>
+            <li>Publicar série histórica de indicadores para transparência ativa.</li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container"><p>&copy; 2026 Picos do Saber. Em desenvolvimento.</p></div>
   </footer>
