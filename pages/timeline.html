@@ -5,30 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timeline — Picos do Saber</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+      margin: 2rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--color-primary-light);
+    }
+    .timeline__item {
+      position: relative;
+      margin-bottom: 2rem;
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .timeline__item::before {
+      content: '';
+      position: absolute;
+      left: -2.05rem;
+      top: 1.35rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid var(--color-primary);
+      background: var(--color-bg);
+    }
+    .timeline__item--done::before {
+      background: var(--color-primary);
+    }
+    .timeline__item--current::before {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 4px rgba(255,183,3,0.3);
+    }
+    .timeline__date {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .timeline__title {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.25rem;
+    }
+    .timeline__desc {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+    .timeline__badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+    .timeline__badge--done { background: #d4edda; color: #155724; }
+    .timeline__badge--current { background: #fff3cd; color: #856404; }
+    .timeline__badge--next { background: #e2e3e5; color: #383d41; }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
       <div class="logo">
-        <img src="../assets/img/logo-picos-do-saber.png" alt="Picos do Saber" style="height:40px;width:auto;">
+        <img src="../assets/img/logo-picos-do-saber.png" alt="Picos do Saber">
         <span class="logo__text">Picos do Saber</span>
       </div>
       <nav class="nav">
         <a class="nav__link" href="../index.html">Início</a>
+        <a class="nav__link" href="marca.html">Marca</a>
+        <a class="nav__link" href="plano-diretor.html">Plano Diretor</a>
+        <a class="nav__link" href="financeiro.html">Financeiro</a>
+        <a class="nav__link" href="sistema.html">Sistema</a>
         <a class="nav__link nav__link--active" href="timeline.html">Timeline</a>
+        <a class="nav__link" href="documentos-visuais.html">Docs Visuais</a>
       </nav>
     </div>
   </header>
+
   <main>
+    <section class="hero" style="background:linear-gradient(135deg, #1a5276, #2ecc71);">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Timeline</h1>
+        <p class="hero__subtitle">Histórico e Marcos do Projeto</p>
+        <p class="hero__description">
+          Acompanhe a evolu&ccedil;&atilde;o do Picos do Saber, desde a concep&ccedil;&atilde;o
+          at&eacute; os pr&oacute;ximos passos.
+        </p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <h1 class="section__title">Timeline</h1>
-        <div class="section__body">
-          <p>Cronograma, marcos e histórico do projeto. <em>Em construção.</em></p>
+        <h2 class="section__title">Marcos</h2>
+        <div class="timeline">
+          <div class="timeline__item timeline__item--done">
+            <p class="timeline__date">Junho 2026</p>
+            <p class="timeline__title">Criação da Marca</p>
+            <p class="timeline__desc">Definição do nome, logotipo e identidade visual do Picos do Saber.</p>
+            <span class="timeline__badge timeline__badge--done">Concluído</span>
+          </div>
+          <div class="timeline__item timeline__item--done">
+            <p class="timeline__date">Junho 2026</p>
+            <p class="timeline__title">Publicação da v0.1</p>
+            <p class="timeline__desc">Estrutura inicial do site no GitHub Pages: index.html, README, pastas e páginas placeholder.</p>
+            <span class="timeline__badge timeline__badge--done">Concluído</span>
+          </div>
+          <div class="timeline__item timeline__item--done">
+            <p class="timeline__date">Junho 2026</p>
+            <p class="timeline__title">Ativação do GitHub Pages</p>
+            <p class="timeline__desc">Configuração do deploy automático a partir do branch main, pasta / (root).</p>
+            <span class="timeline__badge timeline__badge--done">Concluído</span>
+          </div>
+          <div class="timeline__item timeline__item--done">
+            <p class="timeline__date">Junho 2026</p>
+            <p class="timeline__title">Entrada da Logo</p>
+            <p class="timeline__desc">Logo oficial inserida no header e na página de marca. Ajustes de caminho e tamanho.</p>
+            <span class="timeline__badge timeline__badge--done">Concluído</span>
+          </div>
+          <div class="timeline__item timeline__item--done">
+            <p class="timeline__date">Junho 2026</p>
+            <p class="timeline__title">Criação da v0.2</p>
+            <p class="timeline__desc">Páginas de Marca, Plano Diretor e Financeiro com conteúdo realista para reforço escolar.</p>
+            <span class="timeline__badge timeline__badge--done">Concluído</span>
+          </div>
+          <div class="timeline__item timeline__item--current">
+            <p class="timeline__date">Junho 2026</p>
+            <p class="timeline__title">Criação da v0.3</p>
+            <p class="timeline__desc">Páginas de Sistema, Timeline e Documentos Visuais. Ecossistema digital e roadmap.</p>
+            <span class="timeline__badge timeline__badge--current">Em andamento</span>
+          </div>
+          <div class="timeline__item">
+            <p class="timeline__date">Julho 2026</p>
+            <p class="timeline__title">CRM e Captação de Leads</p>
+            <p class="timeline__desc">Estruturação do funil de vendas, planilha de acompanhamento e formulário de captura.</p>
+            <span class="timeline__badge timeline__badge--next">Próximo</span>
+          </div>
+          <div class="timeline__item">
+            <p class="timeline__date">Agosto 2026</p>
+            <p class="timeline__title">Matrícula Digital e Financeiro</p>
+            <p class="timeline__desc">Formulário de matrícula online, contrato digital e planilha de fluxo de caixa.</p>
+            <span class="timeline__badge timeline__badge--next">Próximo</span>
+          </div>
+          <div class="timeline__item">
+            <p class="timeline__date">Setembro 2026</p>
+            <p class="timeline__title">Automação e Portal do Aluno</p>
+            <p class="timeline__desc">Integração com WhatsApp, lembretes automáticos e área restrita no site.</p>
+            <span class="timeline__badge timeline__badge--next">Próximo</span>
+          </div>
         </div>
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container"><p>&copy; 2026 Picos do Saber. Em desenvolvimento.</p></div>
   </footer>

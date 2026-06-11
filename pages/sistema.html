@@ -5,30 +5,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema — Picos do Saber</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .module-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--color-primary-light);
+    }
+    .module-card__title {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.25rem;
+    }
+    .module-card__text {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+    .module-card__status {
+      display: inline-block;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+    .module-card__status--live { background: #d4edda; color: #155724; }
+    .module-card__status--wip { background: #fff3cd; color: #856404; }
+    .module-card__status--planned { background: #e2e3e5; color: #383d41; }
+    .arch-box {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    .arch-box__title {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      font-size: 1.1rem;
+    }
+    .arch-flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .arch-flow__item {
+      background: var(--color-bg);
+      border: 2px solid var(--color-primary-light);
+      border-radius: var(--radius);
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+    }
+    .arch-flow__arrow {
+      font-size: 1.2rem;
+      color: var(--color-primary-light);
+      align-self: center;
+    }
+    @media (max-width: 600px) {
+      .arch-flow__arrow { display: none; }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
       <div class="logo">
-        <img src="../assets/img/logo-picos-do-saber.png" alt="Picos do Saber" style="height:40px;width:auto;">
+        <img src="../assets/img/logo-picos-do-saber.png" alt="Picos do Saber">
         <span class="logo__text">Picos do Saber</span>
       </div>
       <nav class="nav">
         <a class="nav__link" href="../index.html">Início</a>
+        <a class="nav__link" href="marca.html">Marca</a>
+        <a class="nav__link" href="plano-diretor.html">Plano Diretor</a>
+        <a class="nav__link" href="financeiro.html">Financeiro</a>
         <a class="nav__link nav__link--active" href="sistema.html">Sistema</a>
+        <a class="nav__link" href="timeline.html">Timeline</a>
+        <a class="nav__link" href="documentos-visuais.html">Docs Visuais</a>
       </nav>
     </div>
   </header>
+
   <main>
+    <section class="hero" style="background:linear-gradient(135deg, #1a5276, #40916c);">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Sistema</h1>
+        <p class="hero__subtitle">Ecossistema Digital do Picos do Saber</p>
+        <p class="hero__description">
+          Módulos, ferramentas e automações que sustentam a operação do centro de reforço escolar.
+        </p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <h1 class="section__title">Sistema</h1>
+        <h2 class="section__title">Visão Geral</h2>
         <div class="section__body">
-          <p>Módulos, funcionalidades e arquitetura do sistema. <em>Em construção.</em></p>
+          <p>
+            O sistema do Picos do Saber é construído de forma modular e progressiva. Cada
+            módulo resolve um problema real da operação — captação, matrícula, financeiro,
+            comunicação — e pode ser ativado conforme a demanda cresce.
+          </p>
+          <p>
+            A arquitetura prioriza ferramentas gratuitas ou de baixo custo, integrações
+            simples e automações que liberam tempo da mantenedora para o que realmente
+            importa: o acompanhamento pedagógico.
+          </p>
+        </div>
+
+        <div class="arch-box">
+          <p class="arch-box__title">Fluxo do Sistema</p>
+          <div class="arch-flow">
+            <span class="arch-flow__item">Site</span>
+            <span class="arch-flow__arrow">&rarr;</span>
+            <span class="arch-flow__item">CRM / Leads</span>
+            <span class="arch-flow__arrow">&rarr;</span>
+            <span class="arch-flow__item">Matr&iacute;cula</span>
+            <span class="arch-flow__arrow">&rarr;</span>
+            <span class="arch-flow__item">Financeiro</span>
+            <span class="arch-flow__arrow">&rarr;</span>
+            <span class="arch-flow__item">Comunica&ccedil;&atilde;o</span>
+            <span class="arch-flow__arrow">&rarr;</span>
+            <span class="arch-flow__item">Portal</span>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Módulos</h2>
+        <div class="module-grid">
+          <div class="module-card">
+            <p class="module-card__title">Site / Landing Page</p>
+            <p class="module-card__text">Página institucional, apresentação da marca, blog e captura de leads via formulário.</p>
+            <span class="module-card__status module-card__status--live">No ar</span>
+          </div>
+          <div class="module-card">
+            <p class="module-card__title">CRM de Leads</p>
+            <p class="module-card__text">Planilha ou ferramenta gratuita para acompanhar contatos, status e conversão de cada lead.</p>
+            <span class="module-card__status module-card__status--wip">Em desenvolvimento</span>
+          </div>
+          <div class="module-card">
+            <p class="module-card__title">Matr&iacute;cula</p>
+            <p class="module-card__text">Formulário digital de matrícula, ficha do aluno e contrato de prestação de serviços.</p>
+            <span class="module-card__status module-card__status--wip">Em desenvolvimento</span>
+          </div>
+          <div class="module-card">
+            <p class="module-card__title">Financeiro</p>
+            <p class="module-card__text">Controle de mensalidades, emissão de boletos, fluxo de caixa e relatórios simples.</p>
+            <span class="module-card__status module-card__status--planned">Planejado</span>
+          </div>
+          <div class="module-card">
+            <p class="module-card__title">Comunica&ccedil;&atilde;o</p>
+            <p class="module-card__text">Disparo de lembretes, avisos de pagamento e comunicados via WhatsApp e e-mail.</p>
+            <span class="module-card__status module-card__status--planned">Planejado</span>
+          </div>
+          <div class="module-card">
+            <p class="module-card__title">Portal do Aluno</p>
+            <p class="module-card__text">Área restrita com histórico, boletos e comunicados para pais e alunos.</p>
+            <span class="module-card__status module-card__status--planned">Futuro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Automações</h2>
+        <div class="section__body">
+          <p>O sistema conta com automações progressivas para reduzir trabalho manual:</p>
+        </div>
+        <div class="module-grid">
+          <div class="module-card" style="border-left-color:var(--color-accent);">
+            <p class="module-card__title">Captura de Leads</p>
+            <p class="module-card__text">Formulário do site integrado a planilha ou CRM, com disparo automático de e-mail de boas-vindas.</p>
+          </div>
+          <div class="module-card" style="border-left-color:var(--color-accent);">
+            <p class="module-card__title">Lembrete de Pagamento</p>
+            <p class="module-card__text">Disparo automático de mensagem 3 dias antes do vencimento e no dia do atraso.</p>
+          </div>
+          <div class="module-card" style="border-left-color:var(--color-accent);">
+            <p class="module-card__title">Comunicados em Lote</p>
+            <p class="module-card__text">Mensagens para grupos de pais com avisos de feriados, eventos e resultados.</p>
+          </div>
+          <div class="module-card" style="border-left-color:var(--color-accent);">
+            <p class="module-card__title">Relatório Mensal</p>
+            <p class="module-card__text">Planilha automatizada com indicadores de faturamento, inadimplência e alunos ativos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Próximas Entregas</h2>
+        <ol style="list-style:decimal;padding-left:1.5rem;">
+          <li style="margin-bottom:0.75rem;">
+            <strong>CRM de leads</strong> — planilha estruturada com funil de vendas e status de acompanhamento.
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>Formulário de matrícula</strong> — ficha digital com validação de dados e contrato.
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>Controle financeiro</strong> — planilha de fluxo de caixa com projeção e ponto de equilíbrio.
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <strong>Automação de comunicação</strong> — integração com WhatsApp para lembretes e avisos.
+          </li>
+          <li>
+            <strong>Portal do aluno</strong> — área restrita no site com histórico e 2ª via de boleto.
+          </li>
+        </ol>
+      </div>
+    </section>
   </main>
+
   <footer class="footer">
     <div class="container"><p>&copy; 2026 Picos do Saber. Em desenvolvimento.</p></div>
   </footer>
