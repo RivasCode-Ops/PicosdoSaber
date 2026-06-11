@@ -5,30 +5,276 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marca — Picos do Saber</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .brand-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    .brand-showcase__logo {
+      flex: 0 0 auto;
+    }
+    .brand-showcase__logo img {
+      max-width: 320px;
+      height: auto;
+    }
+    .brand-showcase__info {
+      flex: 1;
+      min-width: 240px;
+    }
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .brand-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .brand-card__swatch {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+      border: 2px solid #eee;
+    }
+    .brand-card__swatch--primary { background: #1a5276; }
+    .brand-card__swatch--secondary { background: #2ecc71; }
+    .brand-card__swatch--accent { background: #f1c40f; }
+    .brand-card__swatch--neutral { background: #2c3e50; }
+    .brand-card__label {
+      font-weight: 600;
+    }
+    .brand-card__hex {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+    }
+    .usage-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .usage-table th,
+    .usage-table td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .usage-table th {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+    }
+    .usage-table tr:nth-child(even) {
+      background: var(--color-bg);
+    }
+    .version-list {
+      list-style: none;
+      padding: 0;
+    }
+    .version-list li {
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      background: var(--color-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--color-primary);
+    }
+    .version-list li strong {
+      color: var(--color-primary-dark);
+    }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
       <div class="logo">
-        <span class="logo__icon">&#x1F3D4;</span>
+        <img src="../assets/img/logo-picos-do-saber.png" alt="Picos do Saber" style="height:40px;width:auto;">
         <span class="logo__text">Picos do Saber</span>
       </div>
       <nav class="nav">
         <a class="nav__link" href="../index.html">Início</a>
         <a class="nav__link nav__link--active" href="marca.html">Marca</a>
+        <a class="nav__link" href="plano-diretor.html">Plano Diretor</a>
+        <a class="nav__link" href="financeiro.html">Financeiro</a>
+        <a class="nav__link" href="sistema.html">Sistema</a>
       </nav>
     </div>
   </header>
+
   <main>
     <section class="section">
       <div class="container">
-        <h1 class="section__title">Marca</h1>
-        <div class="section__body">
-          <p>Identidade visual, logotipos e guia de uso da marca. <em>Em construção.</em></p>
+        <h1 class="section__title">Marca Picos do Saber</h1>
+        <p class="section__description" style="font-size:1.1rem;color:var(--color-text-light);margin-bottom:2rem;">
+          Identidade visual, conceito, paleta de cores e diretrizes de uso da marca.
+        </p>
+
+        <div class="brand-showcase">
+          <div class="brand-showcase__logo">
+            <img src="../assets/img/logo-picos-do-saber.png" alt="Logo Picos do Saber">
+          </div>
+          <div class="brand-showcase__info">
+            <h2 style="color:var(--color-primary-dark);font-size:1.5rem;margin-bottom:0.5rem;">Picos do Saber</h2>
+            <p style="font-size:1.1rem;font-weight:600;color:var(--color-text-light);margin-bottom:1rem;">
+              Centro de Desenvolvimento Educacional
+            </p>
+            <p style="margin-bottom:0.5rem;">
+              A marca comunica <strong>educação, crescimento e conquista</strong> por meio do conjunto
+              <strong>livro + figura ascendente + estrela</strong>. O nome "SABER" em destaque visual
+              reforça o propósito educacional.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Conceito</h2>
+        <div class="section__body">
+          <p>
+            O nome <strong>Picos do Saber</strong> evoca a jornada ascendente do conhecimento —
+            cada novo aprendizado é um pico alcançado. O símbolo integra três elementos:
+          </p>
+          <ul style="margin:1rem 0 1rem 1.5rem;">
+            <li><strong>Livro</strong> — a base do conhecimento e da educação formal.</li>
+            <li><strong>Figura ascendente</strong> — o crescimento, o desenvolvimento e a superação.</li>
+            <li><strong>Estrela</strong> — a conquista, o topo, o objetivo alcançado.</li>
+          </ul>
+          <p>
+            A tipografia dá peso ao nome "SABER", posicionando o conhecimento como centro da
+            identidade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Paleta de Cores</h2>
+        <p style="margin-bottom:1.5rem;">
+          A paleta combina <strong>credibilidade (azul)</strong>,
+          <strong>desenvolvimento (verde)</strong> e <strong>conquista (dourado)</strong>.
+        </p>
+        <div class="brand-grid">
+          <div class="brand-card">
+            <div class="brand-card__swatch brand-card__swatch--primary"></div>
+            <p class="brand-card__label">Azul Institucional</p>
+            <p class="brand-card__hex">#1A5276</p>
+            <p class="brand-card__hex" style="font-size:0.8rem;">Credibilidade e confiança</p>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__swatch brand-card__swatch--secondary"></div>
+            <p class="brand-card__label">Verde Desenvolvimento</p>
+            <p class="brand-card__hex">#2ECC71</p>
+            <p class="brand-card__hex" style="font-size:0.8rem;">Crescimento e educação</p>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__swatch brand-card__swatch--accent"></div>
+            <p class="brand-card__label">Dourado Conquista</p>
+            <p class="brand-card__hex">#F1C40F</p>
+            <p class="brand-card__hex" style="font-size:0.8rem;">Destaque e realização</p>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__swatch brand-card__swatch--neutral"></div>
+            <p class="brand-card__label">Neutro</p>
+            <p class="brand-card__hex">#2C3E50</p>
+            <p class="brand-card__hex" style="font-size:0.8rem;">Textos e base</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Versões da Marca</h2>
+        <p style="margin-bottom:1.5rem;">
+          Cada contexto exige uma versão específica da marca.
+        </p>
+        <ul class="version-list">
+          <li>
+            <strong>Completa (horizontal)</strong> — logo + nome + subtítulo.<br>
+            <span style="color:var(--color-text-light);font-size:0.9rem;">
+              Uso: header do site, capas de documentos, apresentações.
+            </span>
+          </li>
+          <li>
+            <strong>Reduzida (nome + símbolo)</strong> — apenas logo e nome, sem subtítulo.<br>
+            <span style="color:var(--color-text-light);font-size:0.9rem;">
+              Uso: favicon, avatar de redes sociais, rodapé.
+            </span>
+          </li>
+          <li>
+            <strong>Símbolo isolado</strong> — apenas o ícone livro + figura + estrela.<br>
+            <span style="color:var(--color-text-light);font-size:0.9rem;">
+              Uso: foto de perfil, app icon, marcador visual.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Onde Usar</h2>
+        <table class="usage-table">
+          <thead>
+            <tr>
+              <th>Contexto</th>
+              <th>Versão</th>
+              <th>Observação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Site — header</td>
+              <td>Completa horizontal</td>
+              <td>Com subtítulo</td>
+            </tr>
+            <tr>
+              <td>Site — home / hero</td>
+              <td>Completa (maior)</td>
+              <td>Versão ampliada</td>
+            </tr>
+            <tr>
+              <td>Instagram / WhatsApp</td>
+              <td>Símbolo isolado</td>
+              <td>Versão simplificada</td>
+            </tr>
+            <tr>
+              <td>Documentos PDF</td>
+              <td>Completa com subtítulo</td>
+              <td>No cabeçalho ou capa</td>
+            </tr>
+            <tr>
+              <td>Favicon / app icon</td>
+              <td>Reduzida</td>
+              <td>Nome + símbolo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section--warning">
+      <div class="container">
+        <h2 class="section__title">Slogan</h2>
+        <blockquote style="font-size:1.3rem;font-style:italic;color:var(--color-primary-dark);border-left:4px solid var(--color-accent);padding-left:1.5rem;margin:1rem 0;">
+          “Educação que leva ao topo.”
+        </blockquote>
+        <p style="color:var(--color-text-light);">
+          O slogan reforça a metáfora dos picos e o propósito de desenvolvimento educacional.
+        </p>
+      </div>
+    </section>
   </main>
+
   <footer class="footer">
     <div class="container"><p>&copy; 2026 Picos do Saber. Em desenvolvimento.</p></div>
   </footer>
